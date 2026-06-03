@@ -499,7 +499,7 @@ async def handle_message(message):
             await safe_answer(message, "Не получилось разобрать голосовое. Попробуйте ещё раз или напишите текстом.")
             return
 
-        await safe_answer(message, "Понял вас. Сейчас спокойно разберу...")
+        await safe_answer(message, "Понял вас. Минуточку...")
 
     if text and has_red_flag(text):
         await safe_answer(
@@ -511,7 +511,7 @@ async def handle_message(message):
         return
 
     if not message.voice:
-        await safe_answer(message, "Сейчас спокойно разберу...")
+        await safe_answer(message, "Минуточку...")
 
     try:
         image_base64_list = None
